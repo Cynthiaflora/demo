@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #eee, #ccc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 60em;
+    height: 38em;
+    font-size: 14px;
+    /* --main-color: sandybrown; */
+    background-image: linear-gradient(to bottom, sandybrown 30%, white 54%);
+    border-radius: 1em;
+    box-shadow:
+        0 2px 1px rgba(0, 0, 0, 0.2),
+        0 3px 1px white;
+    position: relative;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+/* .container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    width: 0.6em;
+    height: 2.3em;
+    background-color: white;
+    top: calc(40% - 2.3em / 2);
+    border-radius: 0.3em;
+    box-shadow:
+        0 3px 1px rgba(0, 0, 0, 0.3),
+        0 -1px 1px rgba(0, 0, 0, 0.2);
+} */
+
+/* .container::before {
+    left: 2em;
+}
+
+.container::after {
+    right: 2em;
+} */
+
+.today {
+    height: 40%;
+    padding: 3em;
+    box-sizing: border-box;
+    color: white;
+}
+
+.today .day {
+    font-size: 6em;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+.today .month {
+    font-size: 4em;
+    line-height: 1em;
+    text-transform: lowercase;
+}
+
+.calendar {
+    padding-top: 3.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar .days,
+.calendar .dates {
+    /* width: 57em;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    line-height: 2.5em;
+    text-align: center; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 57em;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+.calendar .dates span,
+.calendar .days span {
+    flex-basis: calc(14.2857%);
+}
+
+.calendar .days {
+    color: sandybrown;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.calendar .dates {
+    color: dimgray;
+}
+
+.calendar .dates .previous-month,
+.calendar .dates .next-month {
+    color: lightgray;
+}
+
+.calendar .dates .current-day {
+    color: sandybrown;
+    font-weight: bold;
+}
+
+.calendar .dates span:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+.calendar .dates span {
+    transition: 0.3s;
+}
+
+.popup {
+    /* display: none; */
+    position: fixed;
+    width: 200px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #b8d4e3a3;
+    color: #ffffff;
+
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.2s;
+}
+
+.popup .title {
+    display: flex;
+    height: 3em;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    /* 禁止用户通过拖动改变textarea大小 */
+    border: none;
+    /* 去除textarea的默认边框 */
+    overflow: hidden;
+}
+
+form {
+    position: relative;
+}
+
+form div.button {
+    position: absolute;
+    width: 70px;
+    padding: 2px;
+    background-color: sandybrown;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: black 1px solid;
+}
